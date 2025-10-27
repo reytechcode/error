@@ -8,7 +8,7 @@
     android:background="@color/color_gray_light"
     tools:context=".ui.CreateAppointmentActivity">
 
-    
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:layout_gravity="center_vertical"
         android:gravity="center_horizontal">
-        
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,7 +26,6 @@
             android:fontFamily="@font/roboto_regular"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="25dp"/>
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_siguiente"
             android:layout_width="match_parent"
@@ -63,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:text="Tipo de consulta"
                     android:layout_marginTop="12dp"/>
-                <RadioGroup
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/radio_group_type"
@@ -77,20 +76,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Examen"/>
-                    <RadioButton android:id="@+id/radio_operacion"
+                    <RadioButton android:id="@+id/radio_operación"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Operacion"/>
+                        android:text="Operación"/>
                 </RadioGroup>
-
                 <Button
                     android:id="@+id/btn_siguiente"
                     android:layout_width="match_parent"
                     android:text="Siguiente"
                     android:backgroundTint="@color/btn_color"
-                    android:background="@drawable/rounded_button"
                     android:drawableRight="@drawable/ic_next"
                     style="@style/NextButton"/>
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -107,7 +105,6 @@
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -127,7 +124,7 @@
                         android:layout_marginTop="12dp"/>
                     <EditText
                         android:id="@+id/et_fecha"
-                        android:onClick="onClickScheduleDate"
+                        android:onClick="onClickScheduledDate"
                         android:inputType="date"
                         android:focusable="false"
                         android:clickable="true"
@@ -160,34 +157,37 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-
-                        <LinearLayout
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                             android:id="@+id/radio_group_izq"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
+
                         </LinearLayout>
-                        <LinearLayout
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                             android:id="@+id/radio_group_der"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
+
                         </LinearLayout>
                     </LinearLayout>
-
 
                     <Button
                         android:id="@+id/btn_siguiente_dos"
                         android:layout_width="match_parent"
                         android:text="Siguiente"
                         android:backgroundTint="@color/btn_color"
-                        android:background="@drawable/rounded_button"
                         android:drawableRight="@drawable/ic_next"
                         style="@style/NextButton"/>
+
                 </LinearLayout>
+
             </androidx.core.widget.NestedScrollView>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -203,7 +203,6 @@
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -214,12 +213,12 @@
                         android:text="Datos de la cita médica"
                         android:layout_marginTop="10dp"
                         android:textStyle="bold"/>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginTop="12dp">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -227,17 +226,15 @@
                             android:textStyle="bold"/>
                         <TextView
                             android:id="@+id/tv_resumen_medico"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Dra. Elsa Hernández"/>
-
+                            android:text="Doc. Dani"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginTop="8dp">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -245,16 +242,15 @@
                             android:textStyle="bold"/>
                         <TextView
                             android:id="@+id/tv_resumen_especialidad"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Endodoncia"/>
+                            android:text="Dermatología"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginTop="8dp">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -262,16 +258,15 @@
                             android:textStyle="bold"/>
                         <TextView
                             android:id="@+id/tv_resumen_fecha"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="30/07/2024"/>
+                            android:text="12/05/2023"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginTop="8dp">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -279,7 +274,7 @@
                             android:textStyle="bold"/>
                         <TextView
                             android:id="@+id/tv_resumen_hora"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="10:00 AM"/>
                     </LinearLayout>
@@ -288,7 +283,6 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginTop="8dp">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -296,7 +290,7 @@
                             android:textStyle="bold"/>
                         <TextView
                             android:id="@+id/tv_resumen_tipoConsulta"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Consulta"/>
                     </LinearLayout>
@@ -305,7 +299,6 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginTop="8dp">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -313,9 +306,9 @@
                             android:textStyle="bold"/>
                         <TextView
                             android:id="@+id/tv_resumen_sintomas"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sangrado de encia"/>
+                            android:text="Infección en la piel"/>
                     </LinearLayout>
 
                     <Button
@@ -323,12 +316,16 @@
                         android:layout_width="match_parent"
                         android:text="Confirmar"
                         android:backgroundTint="@color/btn_color"
-                        android:background="@drawable/rounded_button"
                         android:drawableRight="@drawable/ic_send"
                         style="@style/NextButton"/>
+
                 </LinearLayout>
+
             </androidx.core.widget.NestedScrollView>
+
         </androidx.cardview.widget.CardView>
+
+
 
     </LinearLayout>
 
